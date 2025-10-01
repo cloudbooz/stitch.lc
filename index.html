@@ -6,6 +6,7 @@
 		<title>TGFAW</title>
 		<style>
 html, body {
+html, body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -14,20 +15,19 @@ html, body {
   touch-action: none;
 }
 
-/* Full-viewport canvas, pinned to the window */
+/* Full-viewport canvas */
 #canvas {
-  position: fixed;   /* key: no layout drift */
+  position: fixed;
   left: 0;
   top: 0;
   width: 100vw;
   height: 100vh;
   display: block;
-  image-rendering: pixelated; /* crisp pixels */
-}
+  image-rendering: pixelated;
 }
 
-#canvas:focus {
-	outline: none;
+/* keep this if you like */
+#canvas:focus { outline: none; }
 }
 
 #status, #status-splash, #status-progress {
@@ -115,7 +115,7 @@ html, body {
 
 		<script src="index.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":1,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":2317584,"index.wasm":38057390},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":2317584,"index.wasm":38057390},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
