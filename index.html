@@ -15,15 +15,17 @@
     touch-action: none;
   }
 
-/* Make the Godot canvas fill the viewport */
 #canvas {
   display: block;
   width: 100vw;
   height: 100vh;
   margin: 0;
-  image-rendering: pixelated; /* crisp pixels */
+  image-rendering: pixelated;
+  
+  /* Center it when aspect ratio doesn't match */
+  object-fit: contain;
+  background: black; /* fill leftover space */
 }
-/* <-- there should NOT be another } here */
 
 #canvas:focus {
 	outline: none;
