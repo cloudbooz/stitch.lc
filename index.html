@@ -19,9 +19,12 @@ body {
 }
 
 #canvas {
-	display: block;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* will crop edges but no black borders */
+  image-rendering: pixelated;
 }
-
 #canvas:focus {
 	outline: none;
 }
