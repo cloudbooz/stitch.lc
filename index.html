@@ -5,31 +5,31 @@
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
 		<title>TGFAW</title>
 		<style>
-html, body, #canvas {
-	margin: 0;
-	padding: 0;
-	border: 0;
-}
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;      /* <- give the page a real height */
+    background: #000;
+    overflow: hidden;
+    touch-action: none;
+  }
 
-body {
-	color: white;
-	background-color: black;
-	overflow: hidden;
-	touch-action: none;
-}
+  /* Make the Godot canvas fill the viewport and stay pinned */
+  #canvas {
+    position: fixed;
+    inset: 0;           /* top:0; right:0; bottom:0; left:0 */
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    image-rendering: pixelated;
+  }
 
-#canvas {
-	display: block;
-	width: 100%;
-	height: 100%;
-	object-fit: contain;
-	margin: auto;
-	image-rendering: pixelated;
-}
+  #canvas:focus { outline: none; }
 
-#canvas:focus {
-	outline: none;
-}
+  /* keep your status styles as-is below */
+</style>
 
 #status, #status-splash, #status-progress {
 	position: absolute;
