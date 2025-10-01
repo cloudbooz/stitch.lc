@@ -15,16 +15,15 @@
     touch-action: none;
   }
 
-  /* Make the Godot canvas fill the viewport */
-  #canvas {
-    display: block;
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    image-rendering: pixelated; /* crisp pixels */
-    /* object-fit not needed when we let Godot size the canvas */
+/* Make the Godot canvas fill the viewport */
+#canvas {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  image-rendering: pixelated; /* crisp pixels */
 }
-}
+/* <-- there should NOT be another } here */
 
 #canvas:focus {
 	outline: none;
